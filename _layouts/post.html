@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -11,7 +11,7 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        • <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
   </header>
 
@@ -25,3 +25,27 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+<div id="comments"></div>
+<script src="{{ "/assets/js/av-min.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/valine.min.js" | relative_url }}"></script>
+<script type="text/javascript">
+  // 评论
+  var GUEST = ['nick','mail','link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function (item) {
+    return GUEST.indexOf(item)>-1;
+  });
+  new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: true,
+      appId: 'rC4kF9LljhBaXd1dAYlj4pV3-gzGzoHsz',
+      appKey: 'G4G0TCd2kXHdWG9k94EF8SNv',
+      placeholder: '留下你的神回复吧~',
+      avatar:'mp',
+      guest_info:guest,
+      pageSize:'10' || 10,
+  });
+</script>
+<noscript>为正常使用评论功能请激活JavaScript</noscript>
+</div>

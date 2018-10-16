@@ -3,8 +3,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Welcome to Study! - Jianghang's Blog</title>
-<meta name="keywords"  content="个人博客,个人博客网站,jekyll">
+<title>开始使用 jekyll 写个人博客啦 - Jianghang's Blog</title>
+<meta name="keywords"  content="">
 <meta name="description" content="锦江杭的个人博客，关于学习、情感、青春和梦想。博客由个人原创网页设计，采用Jekyll搭建，Markdown写作，托管于GitHub。">
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -29,9 +29,9 @@
 </header>
 <section class="site-banner">
       <div class="wrapper">
-          <img src="/assets/img/logo.png" width="90px" height="90px">          
+          <img src="/assets/img/logo.png" width="90px" height="90px" alt="锦江杭个人博客">          
      
-          <a href="/" title="锦江杭的个人博客，关于学业、情感、青春和梦想">关于学业、情感、青春和梦想</a>
+          <a href="/" title="锦江杭的个人博客，关于学习、情感、青春和梦想">关于学习、情感、青春和梦想</a>
 
       </div>
     </section>
@@ -39,12 +39,12 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="space"></div>
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Welcome to Study!</h1>
+    <h1 class="post-title p-name" itemprop="name headline">开始使用 jekyll 写个人博客啦</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2018-10-09T16:23:35+08:00" itemprop="datePublished">2018-10-09
+      <time class="dt-published" datetime="2018-10-16T00:00:00+08:00" itemprop="datePublished">2018-10-16
       </time></p>
   </header>
 
@@ -64,8 +64,32 @@
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 
-  </div><a class="u-url" href="/20181009-3/" hidden></a>
+  </div><a class="u-url" href="/20181016-1/" hidden></a>
 </article>
+<div id="comments"></div>
+<script src="/assets/js/av-min.js"></script>
+<script src="/assets/js/valine.min.js"></script>
+<script type="text/javascript">
+  // 评论
+  var GUEST = ['nick','mail','link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function (item) {
+    return GUEST.indexOf(item)>-1;
+  });
+  new Valine({
+      el: '#comments' ,
+      verify: false,
+      notify: true,
+      appId: 'rC4kF9LljhBaXd1dAYlj4pV3-gzGzoHsz',
+      appKey: 'G4G0TCd2kXHdWG9k94EF8SNv',
+      placeholder: '留下你的神回复吧~',
+      avatar:'mp',
+      guest_info:guest,
+      pageSize:'10' || 10,
+  });
+</script>
+<noscript>为正常使用评论功能请激活JavaScript</noscript>
+</div>
 
       </div>
     </main><footer class="site-footer h-card">
