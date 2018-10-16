@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  {%- include head.html -%}
+
+  <body>
+    {%- include header.html -%}
+
+    <section class="site-banner">
+      <div class="wrapper">
+          <img src="/assets/img/logo.png" width="90px" height="90px">          
+     
+          <a href="/" title="锦江杭的个人博客，关于学业、情感、青春和梦想">关于学业、情感、青春和梦想</a>
+
+      </div>
+    </section>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="space"></div>
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+    <script id="ribbon" type="text/javascript" size="100" alpha="0.3"  zIndex="-1" src="{{ "/assets/canvas-ribbon.js" | relative_url }}"></script>
+    <script src="{{ "/assets/main.js" | relative_url }}"></script>
+  </body>
+
+</html>
